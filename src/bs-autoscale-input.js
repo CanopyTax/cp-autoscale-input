@@ -1,6 +1,14 @@
+/*!
+ * bs-autoscale-input
+ * author: Bret Little
+ * copyright: 2015
+ * license: MIT
+ * version: 1.0.0
+ */
 var batp = angular.module("bs-autoscale-input", []);
 
 batp.directive("bsAutoscaleInput", [
+
 	function() {
 		var html = function(text, size, family) {
 			return "<div style='position: absolute;'><span style='font-family:" + family + ";font-size:" + size + " ;'>" + text + "</span></div>";
@@ -13,7 +21,7 @@ batp.directive("bsAutoscaleInput", [
 					text = text.length < 10 ? "hello" : text;
 					var measuredEl = $(html(text, el.css('font-size'), el.css('font-family')));
 					el.after(measuredEl);
-					el.width(measuredEl.width());
+					el.width(measuredEl.width() || "50px");
 					measuredEl.remove();
 				}
 
@@ -23,7 +31,7 @@ batp.directive("bsAutoscaleInput", [
 					if (val && val.length) {
 						measureAndSize(val);
 					} else {
-						measureAndSize(el.attr('placeholder'));
+						measureAndSize(el.attr('placeholder') || "hello dawg");
 					}
 				});
 
