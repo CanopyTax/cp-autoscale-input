@@ -23,3 +23,10 @@ angular.module("app", ["bs-autoscale-input"]);
 ```html
   <input type="text" ng-model="myDate" bs-autoscale-input/>
 ```
+## Options
+
+### Max-length
+Limit the length the input auto-scales to
+```html
+  <input type="text" ng-model="myDate" bs-autoscale-input max-length="20"/>
+```
