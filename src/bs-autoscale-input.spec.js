@@ -25,12 +25,12 @@ describe("Beanstalk autoscale input", function() {
 	});
 
 	it("should scale the input correctly when first rendered", function() {
-		expect(input.width()).toBe(94);
+		expect(input.width()).toBe(99);
 	});
 
 	it("should scale the input as characters are typed", function() {
 		input.val("Hello there!").keyup();
-		expect(input.width()).toBe(82);
+		expect(input.width()).toBe(87);
 	});
 
 	it("should have a minimum scale of 28px", function() {
@@ -40,12 +40,12 @@ describe("Beanstalk autoscale input", function() {
 
 	it("Should use the placeholder if there is no current value", function() {
 		input.val("").keyup();
-		expect(input.width()).toBe(169);
+		expect(input.width()).toBe(189);
 	});
 
 	it("Should autoscale when the model changes", function() {
 		scope.value = "Bism allah irahaman irahim allhamdullah";
 		scope.$digest();
-		expect(input.width()).toBe(290);
+		expect(input.width()).toBe(310);
 	});
 });
