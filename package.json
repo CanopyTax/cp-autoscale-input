@@ -1,6 +1,6 @@
 {
   "name": "bs-autoscale-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An angular directive time picker.",
   "main": "build/bs-time-pick.js",
   "scripts": {

@@ -1,10 +1,3 @@
-/*!
- * bs-autoscale-input
- * author: Bret Little
- * copyright: 2015
- * license: MIT
- * version: 1.0.0
- */
 var batp = angular.module("bs-autoscale-input", []);
 
 batp.directive("bsAutoscaleInput", [
@@ -22,7 +15,7 @@ batp.directive("bsAutoscaleInput", [
 					text = text.length < 3 ? "hello" : text;
 					text = text.replace(/\s/g, "_");
 					if(attr.maxLength) text = text.substring(0,attr.maxLength);
-					var measuredEl = $(html(text, el.css('font-size'), el.css('font-family')));
+					var measuredEl = $(html(text, el.css('font-size'), el.css('font-family').replace(/\"/g, "'")));
 					el.after(measuredEl);
 					el.width(measuredEl.width() || "50px");
 					measuredEl.remove();
