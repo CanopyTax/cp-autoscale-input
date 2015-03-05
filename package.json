@@ -1,8 +1,8 @@
 {
   "name": "bs-autoscale-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An angular directive time picker.",
-  "main": "build/bs-time-pick.js",
+  "main": "build/bs-autoscale-input.js",
   "scripts": {
     "test": "node node_modules/karma/bin/karma start",
     "build": "webpack --optimize-minimize"
