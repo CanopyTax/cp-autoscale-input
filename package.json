@@ -1,22 +1,22 @@
 {
-  "name": "bs-autoscale-input",
+  "name": "cp-autoscale-input",
   "version": "1.0.4",
-  "description": "An angular directive time picker.",
-  "main": "build/bs-autoscale-input.js",
+  "description": "An angular directive for auto sizing an input based upon the content within it",
+  "main": "build/cp-autoscale-input.js",
   "scripts": {
     "test": "node node_modules/karma/bin/karma start",
     "build": "webpack --optimize-minimize"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Beanstalkhq/bs-autoscale-input.git"
+    "url": "https://github.com/canopytax/cp-autoscale-input.git"
   },
   "author": "Bret Little",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Beanstalkhq/bs-autoscale-input/issues"
+    "url": "https://github.com/canopytax/cp-autoscale-input/issues"
   },
-  "homepage": "https://github.com/Beanstalkhq/bs-autoscale-input",
+  "homepage": "https://github.com/canopytax/cp-autoscale-input",
   "devDependencies": {
     "6to5": "^2.9.3",
     "6to5-loader": "^2.0.0",

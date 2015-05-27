@@ -1,12 +1,12 @@
 describe("Beanstalk autoscale input", function() {
 	var elm, scope, input;
 
-	beforeEach(module('bs-autoscale-input'));
+	beforeEach(module('cp-autoscale-input'));
 
 	beforeEach(inject(function($rootScope, $compile, $filter) {
 		elm = angular.element(
 			'<div>' +
-			'<input type="text" bs-autoscale-input ng-model="value" placeholder="something for you to eat"/>' +
+			'<input type="text" cp-autoscale-input ng-model="value" placeholder="something for you to eat"/>' +
 			'</div>'
 		);
 

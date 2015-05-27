@@ -6,10 +6,10 @@ var version = require('./package.json').version;
 
 
 module.exports = {
-  entry: "./src/bs-autoscale-input.js",
+  entry: "./src/cp-autoscale-input.js",
   output: {
     path: './build',
-    filename: 'bs-autoscale-input.js'
+    filename: 'cp-autoscale-input.js'
   },
   module: {
     loaders: [
@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new webpack.BannerPlugin("\
-bs-autoscale-input\n\
+cp-autoscale-input\n\
 author: Bret Little\n\
 copyright: 2015\n\
 license: MIT\n\

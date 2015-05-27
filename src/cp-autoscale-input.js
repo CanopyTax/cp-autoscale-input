@@ -1,6 +1,6 @@
-var batp = angular.module("bs-autoscale-input", []);
+var batp = angular.module("cp-autoscale-input", []);
 
-batp.directive("bsAutoscaleInput", [
+batp.directive("cpAutoscaleInput", [
 
 	function() {
 		var html = function(text, size, family) {
