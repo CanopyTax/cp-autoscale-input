@@ -48,4 +48,9 @@ describe("Beanstalk autoscale input", function() {
 		scope.$digest();
 		expect(input.width()).toBe(310);
 	});
+
+	it("should prevent cross site scripting", function() {
+		input.val("<script>window.attacked=true;</script>").keyup();
+		expect(window.attacked).toBeUndefined();
+	});
 });

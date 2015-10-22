@@ -15,10 +15,17 @@ batp.directive("cpAutoscaleInput", [
 					text = text.length < 3 ? "hello" : text;
 					text = text.replace(/\s/g, "_");
 					if(attr.maxLength) text = text.substring(0,attr.maxLength);
-					var measuredEl = $(html(text, el.css('font-size'), el.css('font-family').replace(/\"/g, "'")));
+					var measuredEl = document.createElement('div');
+					measuredEl.style.position = "absolute";
+					var span = document.createElement('span');
+					span.style['font-family'] = el.css('font-family').replace(/\"/g, "'");
+					span.style['font-size'] = el.css('font-size');
+					span.style['font-weight'] = '400';
+					span.innerText = text;
+					measuredEl.appendChild(span);
 					el.after(measuredEl);
-					el.width(measuredEl.width() || "50px");
-					measuredEl.remove();
+					el.width(measuredEl.getBoundingClientRect().width + "px");
+					measuredEl.parentNode.removeChild(measuredEl);
 				}
 
 				el.keyup(function(e) {
