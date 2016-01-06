@@ -28,3 +28,6 @@ bower_components
 
 # Users Environment Variables
 .lock-wscript
+
+# Jet Brains IDE config
+.idea/
