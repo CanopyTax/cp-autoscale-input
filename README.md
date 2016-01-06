@@ -1,4 +1,4 @@
-cp-autoscale-input  [![Build Status](https://travis-ci.org/canopytax/cp-autoscale-input.png?branch=master)](https://travis-ci.org/canopytax/cp-autoscale-input)
+cp-autoscale-input  [![Build Status](https://travis-ci.org/CanopyTax/cp-autoscale-input.png?branch=master)](https://travis-ci.org/CanopyTax/cp-autoscale-input)
 ============
 
 An angular directive for auto sizing and input based upon the content within it
@@ -11,7 +11,7 @@ Install cp-time-pick with bower or npm
   bower install --save cp-autoscale-input
   npm install --save cp-autoscale-input
 ```
-Or manually download the [built file](https://raw.githubusercontent.com/canopytax/cp-autoscale-input/master/build/cp-autoscale-input.js)
+Or manually download the [built file](https://raw.githubusercontent.com/CanopyTax/cp-autoscale-input/master/build/cp-autoscale-input.js)
 
 ## Usage
 Make your angular app depend upon the `cp-autoscale-input` module
