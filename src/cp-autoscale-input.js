@@ -3,8 +3,8 @@ var batp = angular.module("cp-autoscale-input", []);
 batp.directive("cpAutoscaleInput", [
 
 	function() {
-		var html = function(text, size, family) {
-			return '<div style="position: absolute;"><span style="font-family:' + family + ';font-size:' + size + '; font-weight:400;">' + text + '</span></div>';
+		var html = function(size, family) {
+			return '<div style="position: absolute;"><span style="font-family:' + family + ';font-size:' + size + '; font-weight:400;"></span></div>';
 		};
 		return {
 			require: 'ngModel',
@@ -15,17 +15,11 @@ batp.directive("cpAutoscaleInput", [
 					text = text.length < 3 ? "hello" : text;
 					text = text.replace(/\s/g, "_");
 					if(attr.maxLength) text = text.substring(0,attr.maxLength);
-					var measuredEl = document.createElement('div');
-					measuredEl.style.position = "absolute";
-					var span = document.createElement('span');
-					span.style['font-family'] = el.css('font-family').replace(/\"/g, "'");
-					span.style['font-size'] = el.css('font-size');
-					span.style['font-weight'] = '400';
-					span.innerText = text;
-					measuredEl.appendChild(span);
+					var measuredEl = $(html(el.css('font-size'), el.css('font-family').replace(/\"/g, "'")));
+					measuredEl.find('span').text(text);
 					el.after(measuredEl);
-					el.css('width', measuredEl.offsetWidth + 4 + "px");
-					measuredEl.parentNode.removeChild(measuredEl);
+					el.css('width', measuredEl[0].offsetWidth + 4 + 'px');
+					measuredEl.remove();
 				}
 
 				el.keyup(function(e) {
