@@ -24,7 +24,7 @@ batp.directive("cpAutoscaleInput", [
 					span.innerText = text;
 					measuredEl.appendChild(span);
 					el.after(measuredEl);
-					el.width(measuredEl.getBoundingClientRect().width + "px");
+					el.css(width, measuredEl.offsetWidth + 4 + "px");
 					measuredEl.parentNode.removeChild(measuredEl);
 				}
 
