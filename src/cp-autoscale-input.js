@@ -17,7 +17,7 @@ batp.directive("cpAutoscaleInput", [
 					if(attr.maxLength) text = text.substring(0,attr.maxLength);
 					var measuredEl = $(html(el.css('font-size'), el.css('font-family').replace(/\"/g, "'")));
 					measuredEl.find('span').text(text);
-					el.after(measuredEl);
+					$('html').append(measuredEl);
 					el.css('width', measuredEl[0].offsetWidth + 4 + 'px');
 					measuredEl.remove();
 				}
