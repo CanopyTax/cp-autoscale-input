@@ -1,6 +1,6 @@
 {
   "name": "cp-autoscale-input",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "An angular directive for auto sizing an input based upon the content within it",
   "main": "build/cp-autoscale-input.js",
   "scripts": {

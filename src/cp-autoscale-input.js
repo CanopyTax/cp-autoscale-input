@@ -14,7 +14,6 @@ batp.directive("cpAutoscaleInput", [
 				function measureAndSize(text) {
 					text = text.length < 3 ? "hello" : text;
 					text = text.replace(/\s/g, "_");
-					if(attr.maxLength) text = text.substring(0,attr.maxLength);
 					var measuredEl = $(html(el.css('font-size'), el.css('font-family').replace(/\"/g, "'")));
 					measuredEl.find('span').text(text);
 					$('html').append(measuredEl);
